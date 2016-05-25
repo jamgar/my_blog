@@ -10,7 +10,7 @@
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
-    <a href="#" class="name">James Garcia</a>
+    <%= link_to "James Garcia", root_path, class: "name" %>
     <nav>
       <%= link_to "Articles", posts_path %>
       <a href="#">Projects</a>
@@ -18,7 +18,17 @@
     </nav>
   </header>
 
-<%= yield %>
+  <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy; James Garcia All Rights Reserved.</p>
+    <nav>
+      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </nav>
+  </footer>  
 
 </body>
 </html>
