@@ -21,6 +21,22 @@ class ProjectsController < ApplicationController
   def show
   end
   
+  def edit
+  end
+  
+  def update
+    if @project.update(project_params)
+      redirect_to @project, notice: "Nice! The project has been successfully saved!"
+    else
+      render 'edit', notice: "Not saved!"
+    end
+  end
+  
+  def destroy
+    @project.destroy
+    redirect_to projects_path
+  end
+  
   
   private
   
